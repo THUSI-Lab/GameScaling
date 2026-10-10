@@ -1,0 +1,6 @@
+# Core client (gamescaling/): talks to any OpenAI-compatible server.
+requests>=2.31
+Pillow>=10.0
+
+# Serving the checkpoint (separate environment is fine):
+#   pip install "vllm>=0.17"      # Qwen3.5 architecture; tested with 0.17.0

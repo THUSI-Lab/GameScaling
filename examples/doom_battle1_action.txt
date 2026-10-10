@@ -1,0 +1,5 @@
+<think>
+
+</think>
+
+<|action_start|>-37 -3 0 ; LB S ; LB ; LB ; LB ; LB ; LB<|action_end|>
