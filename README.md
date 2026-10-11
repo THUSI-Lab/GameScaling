@@ -410,10 +410,17 @@ Offline checks of prompts, request bodies and action parsing; no GPU or server n
 
 ## License
 
-The weights and code in this repository are released under the
-[Apache License 2.0](LICENSE). The models are continued pre-trained from
-[Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-9B), which is also Apache 2.0. Game titles, footage
-and other game assets referenced here belong to their respective owners.
+GameScaling is a **purely scientific research** project. We carry out **no commercial activity** of
+any kind with it: nothing here is sold, licensed for a fee, or used in any product or service.
+
+- **Models and code: Apache-2.0.** The weights and the inference code are released under the
+  [Apache License 2.0](LICENSE). The models are continued pre-trained from
+  [Qwen3.5](https://huggingface.co/Qwen/Qwen3.5-9B), which is also Apache 2.0.
+- **Gameplay data is not released.** The training corpus stays private; game frames in this
+  repository (e.g. `examples/doom_battle1.jpg`) only illustrate how to use the model.
+- **Game copyright belongs to the publishers.** All game titles, footage, copyrights, trademarks and
+  other game assets referenced here belong to their respective publishers and owners. The Apache
+  2.0 licence covers our weights and code only and grants no right to any game content.
 
 ## Citation
 
