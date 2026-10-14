@@ -4,9 +4,12 @@
   <img src="assets/logos/affiliations.png" alt="miHoYo · Tsinghua University · University of Chinese Academy of Sciences · The University of Hong Kong" width="100%" style="width:100%;max-width:100%;">
 </p>
 
-<h1 align="center" style="font-size:3.2em;line-height:1.1;margin:0.2em 0 0.15em;">Scaling in Games</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/title-dark.png">
+  <img src="assets/title-light.png" alt="Scaling in Games" height="88">
+</picture>
 
-<h2 align="center" style="font-size:1.5em;line-height:1.3;font-weight:600;margin:0 0 0.9em;border:none;">Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds</h2>
+<h3 align="center">Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds</h3>
 
 <p align="center" style="line-height:1.5;margin:0.4em 0 0.3em;">
 <span style="white-space:nowrap;"><b>Kuan Zhang</b><sup>1,2,*,‡</sup></span>, <span style="white-space:nowrap;"><b>Yukun Chen</b><sup>1,3,*,‡</sup></span>, <span style="white-space:nowrap;"><b>Zhihao Yang</b><sup>1,3,*,‡</sup></span>, <span style="white-space:nowrap;">Yue Su<sup>4</sup></span>, <span style="white-space:nowrap;">Xiangnan Wu<sup>3</sup></span>, <span style="white-space:nowrap;">Zirong Chen<sup>2</sup></span>, <span style="white-space:nowrap;">Run Luo<sup>1,5,‡</sup></span>, <span style="white-space:nowrap;">Jinkun Hou<sup>6</sup></span>, <span style="white-space:nowrap;">Tao Tan<sup>1</sup></span>, <span style="white-space:nowrap;"><b>Yinhe Zheng</b><sup>1,†</sup></span>, <span style="white-space:nowrap;"><b>Yiming Li</b><sup>2,†</sup></span>
