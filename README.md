@@ -43,53 +43,43 @@ frames and actions) and returns the next **200 ms of keyboard and mouse actions*
 acts.
 
 This GitHub repository holds the inference client, the standard system-prompt template, the
-example and the tests. The eight checkpoints are on Hugging Face,
-[THUSI-Lab/GameScaling](https://huggingface.co/THUSI-Lab/GameScaling); download them with
-`hf download` (§1). There is no training code. Paper results and analysis are on the [project page](https://gamescaling.github.io).
+example and the tests. Each of the eight checkpoints is its own Hugging Face repository (below,
+and in the [GameScaling collection](https://huggingface.co/collections/THUSI-Lab/gamescaling-model-6acf7c0c6500ebee61a7f872)). There is no training code. Paper results and analysis are on the [project page](https://gamescaling.github.io).
 
 ## Checkpoints
 
-| Model | Folder | Weights | GPUs (bf16) |
-|---|---|---:|:---:|
-| GameScaling-0.8B-S1 | `models/0p8b_s1_1600h_gs6736` | 2.2 GB | 1 |
-| GameScaling-0.8B-S3 | `models/0p8b_s3_1600h_gs6760` | 2.2 GB | 1 |
-| GameScaling-2B-S1 | `models/2b_s1_1600h_gs6736` | 5.4 GB | 1 |
-| GameScaling-2B-S3 | `models/2b_s3_1600h_gs6760` | 5.4 GB | 1 |
-| GameScaling-9B-S1 | `models/9b_s1_1600h_gs6736` | 18.8 GB | 1 |
-| GameScaling-9B-S3 | `models/9b_s3_1600h_gs6760` | 18.8 GB | 1 |
-| GameScaling-27B-S1 | `models/27b_s1_1600h_gs6995` | 54.7 GB | 2 (tensor parallel) |
-| GameScaling-27B-S3 | `models/27b_s3_1600h_gs7020` | 54.7 GB | 2 (tensor parallel) |
+| Model | Training steps | Weights | GPUs (bf16) |
+|---|---:|---:|:---:|
+| [GameScaling-0.8B-S1](https://huggingface.co/THUSI-Lab/GameScaling-0.8B-S1) | 6,736 | 2.2 GB | 1 |
+| [GameScaling-0.8B-S3](https://huggingface.co/THUSI-Lab/GameScaling-0.8B-S3) | 6,760 | 2.2 GB | 1 |
+| [GameScaling-2B-S1](https://huggingface.co/THUSI-Lab/GameScaling-2B-S1) | 6,736 | 5.4 GB | 1 |
+| [GameScaling-2B-S3](https://huggingface.co/THUSI-Lab/GameScaling-2B-S3) | 6,760 | 5.4 GB | 1 |
+| [GameScaling-9B-S1](https://huggingface.co/THUSI-Lab/GameScaling-9B-S1) | 6,736 | 18.8 GB | 1 |
+| [GameScaling-9B-S3](https://huggingface.co/THUSI-Lab/GameScaling-9B-S3) | 6,760 | 18.8 GB | 1 |
+| [GameScaling-27B-S1](https://huggingface.co/THUSI-Lab/GameScaling-27B-S1) | 6,995 | 54.7 GB | 2 (tensor parallel) |
+| [GameScaling-27B-S3](https://huggingface.co/THUSI-Lab/GameScaling-27B-S3) | 7,020 | 54.7 GB | 2 (tensor parallel) |
 
 - **S1** is trained on Minecraft gameplay only. **S3** is a balanced mixture: 27% Minecraft, the
   rest from other games. All checkpoints use 1,600 h of gameplay.
-- Folder names are `<size>_<mixture>_<hours>h_gs<training steps>`. Weights are bfloat16, from the
-  Qwen3.5-0.8B / 2B / 9B / 27B backbones.
+- Weights are bfloat16, from the Qwen3.5-0.8B / 2B / 9B / 27B backbones.
 
 ## File tree
 
-Everything except `models/` is in this repository. `models/` is on Hugging Face only and lands in
-this layout when downloaded with `--local-dir .` (§1).
+This GitHub repository holds the code; each checkpoint is a separate Hugging Face repository.
 
 ```text
-GameScaling/
-├── models/                     [Hugging Face] eight checkpoints, one folder each
-│   ├── 0p8b_s1_1600h_gs6736/
-│   │   ├── config.json         Qwen3.5 architecture, bfloat16
-│   │   ├── model.safetensors   weights (27B: 2 shards + index)
-│   │   ├── chat_template.jinja required, renders history turns
-│   │   ├── tokenizer.json
-│   │   ├── tokenizer_config.json
-│   │   ├── generation_config.json
-│   │   ├── preprocessor_config.json
-│   │   ├── processor_config.json
-│   │   └── video_preprocessor_config.json
-│   ├── 0p8b_s3_1600h_gs6760/
-│   ├── 2b_s1_1600h_gs6736/
-│   ├── 2b_s3_1600h_gs6760/
-│   ├── 9b_s1_1600h_gs6736/
-│   ├── 9b_s3_1600h_gs6760/
-│   ├── 27b_s1_1600h_gs6995/
-│   └── 27b_s3_1600h_gs7020/
+THUSI-Lab/GameScaling-<size>-<mixture>   Hugging Face, one repository per checkpoint
+├── config.json                 Qwen3.5 architecture, bfloat16
+├── model.safetensors           weights (27B: 2 shards + index)
+├── chat_template.jinja         required, renders history turns
+├── tokenizer.json
+├── tokenizer_config.json
+├── generation_config.json
+├── preprocessor_config.json
+├── processor_config.json
+└── video_preprocessor_config.json
+
+GameScaling/                    this GitHub repository
 ├── prompts/
 │   ├── system_prompt_template.txt  standard prompt, 3 slots (§2)
 │   └── example_doom_battle1.txt    complete Doom prompt (§2)
@@ -111,24 +101,27 @@ GameScaling/
 
 ## 1. Download and serve
 
-Clone the code, then download only the checkpoint you need from Hugging Face into `models/`:
+Clone the code:
 
 ```bash
 git clone https://github.com/THUSI-Lab/GameScaling.git
 cd GameScaling
-pip install -U huggingface_hub
-hf download THUSI-Lab/GameScaling --include "models/9b_s1_1600h_gs6736/*" --local-dir .
 ```
 
-Use any folder name from the Checkpoints table; `--include "models/*"` fetches all eight
-(about 162 GB).
-
-Serve it with vLLM (tested with 0.17.0):
+Serve a checkpoint with vLLM (tested with 0.17.0); vLLM fetches the weights from its repository:
 
 ```bash
 pip install "vllm>=0.17"
-bash scripts/serve_vllm.sh models/9b_s1_1600h_gs6736 8000        # 0.8B-9B fit on one GPU
-bash scripts/serve_vllm.sh models/27b_s1_1600h_gs6995 8000 2      # 27B: tensor parallel 2
+bash scripts/serve_vllm.sh THUSI-Lab/GameScaling-9B-S1 8000        # 0.8B-9B fit on one GPU
+bash scripts/serve_vllm.sh THUSI-Lab/GameScaling-27B-S1 8000 2     # 27B: tensor parallel 2
+```
+
+To keep the weights in a local folder instead, download the checkpoint repository and pass its path:
+
+```bash
+pip install -U huggingface_hub
+hf download THUSI-Lab/GameScaling-9B-S1 --local-dir ./GameScaling-9B-S1
+bash scripts/serve_vllm.sh ./GameScaling-9B-S1 8000
 ```
 
 `serve_vllm.sh CKPT [PORT] [TP]` starts vLLM with `--served-model-name gamescaling`, bfloat16,

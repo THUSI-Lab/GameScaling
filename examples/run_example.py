@@ -5,7 +5,7 @@ GameScaling-9B-S3, and `examples/doom_battle1_action.txt` is the reply the model
 gave on that frame (a monster just left of the crosshair: turn left and fire).
 
     python examples/run_example.py --offline            # parse the reference reply only
-    bash scripts/serve_vllm.sh models/9b_s3_1600h_gs6760 8000
+    bash scripts/serve_vllm.sh THUSI-Lab/GameScaling-9B-S3 8000
     python examples/run_example.py                      # prefill <think>
     python examples/run_example.py --no-reasoning       # prefill <think>\\n\\n</think>
 
