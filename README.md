@@ -421,11 +421,10 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
 ## Citation
 
 ```bibtex
-@article{zhang2026scaling,
-  title   = {Scaling in Games: Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds},
-  author  = {Zhang, Kuan and Chen, Yukun and Yang, Zhihao and Su, Yue and Wu, Xiangnan and
-             Chen, Zirong and Luo, Run and Hou, Jinkun and Tan, Tao and Zheng, Yinhe and Li, Yiming},
-  journal = {arXiv preprint},
-  year    = {2026}
+@article{zhang-scaling-games,
+  title = {Scaling in Games: Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds},
+  author = {Zhang, Kuan and Chen, Yukun and Yang, Zhihao and Su, Yue and Wu, Xiangnan and Chen, Zirong and Luo, Run and Hou, Jinkun and Tan, Tao and Zheng, Yinhe and Li, Yiming},
+  journal = {URL: https://gamescaling.github.io/},
+  year = {2026}
 }
 ```
