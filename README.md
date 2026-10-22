@@ -432,3 +432,7 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
   year = {2026}
 }
 ```
+
+## Related survey
+
+Interested in game agents? Explore our survey, **Towards Generalist Game Players**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
