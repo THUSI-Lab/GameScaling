@@ -22,7 +22,7 @@
 
 <p align="center">
   <a href="https://gamescaling.github.io" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/Project-Page-1f6feb?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Project Page" style="display:inline-block;vertical-align:middle;margin:0;"></a>
-  <a href="https://gamescaling.github.io" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/arXiv-coming%20soon-lightgrey?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv (coming soon)" style="display:inline-block;vertical-align:middle;margin:0;"></a>
+  <a href="https://arxiv.org/abs/2610.28698" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/arXiv-2610.28698-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv:2610.28698" style="display:inline-block;vertical-align:middle;margin:0;"></a>
   <a href="https://github.com/THUSI-Lab/GameScaling" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Code" style="display:inline-block;vertical-align:middle;margin:0;"></a>
   <a href="https://huggingface.co/THUSI-Lab/GameScaling" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Models-THUSI--Lab%2FGameScaling-ffcc4d?style=for-the-badge" alt="Models" style="display:inline-block;vertical-align:middle;margin:0;"></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0" style="display:inline-block;margin:2px;"><img src="https://img.shields.io/badge/License-Apache%202.0-2ea44f?style=for-the-badge" alt="License: Apache 2.0" style="display:inline-block;vertical-align:middle;margin:0;"></a>
@@ -424,7 +424,7 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
 @article{zhang-scaling-games,
   title = {Scaling in Games: Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds},
   author = {Zhang, Kuan and Chen, Yukun and Yang, Zhihao and Su, Yue and Wu, Xiangnan and Chen, Zirong and Luo, Run and Hou, Jinkun and Tan, Tao and Zheng, Yinhe and Li, Yiming},
-  journal = {URL: https://gamescaling.github.io/},
+  journal = {arXiv preprint arXiv:2610.28698},
   year = {2026}
 }
 ```
