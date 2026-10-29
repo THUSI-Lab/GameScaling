@@ -436,3 +436,13 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
 ## Related survey
 
 Interested in game agents? Explore our survey, **Towards Generalist Game Players**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=THUSI-Lab%2FGameScaling&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=THUSI-Lab/GameScaling&amp;type=Date&amp;theme=dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=THUSI-Lab/GameScaling&amp;type=Date">
+    <img alt="GameScaling Star History Chart" src="https://api.star-history.com/svg?repos=THUSI-Lab/GameScaling&amp;type=Date" width="100%">
+  </picture>
+</a>
