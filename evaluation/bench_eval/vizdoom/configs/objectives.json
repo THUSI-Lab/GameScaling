@@ -1,0 +1,34 @@
+{
+  "_doc": [
+    "Objective sets for --objective-set (B4-human: S1 + a fixed human-written objective, no S2).",
+    "Each map's text is appended to its Game Rules as 'Current objective: ...', the slot the",
+    "Minecraft S1 reads the S2 objective from. A list is indexed by episode % len(list).",
+    "lesson: what an S2 reflection would plausibly write -- goal-level, no key names.",
+    "steer:  manipulation check with a measurable signature (signed mouse X, attack rate);",
+    "        even episodes ask for right turns, odd episodes for left turns."
+  ],
+  "lesson": {
+    "battle1": "Keep moving around the open arena instead of standing still. Turn until the nearest monster is under the crosshair before firing, and walk over health packs and ammo boxes whenever you are hurt or low on ammo.",
+    "battle2": "Keep moving through the maze corridors. Turn to face each monster as soon as it appears around a corner and fire while it is under the crosshair; walk over health packs and ammo boxes as you pass them.",
+    "defend_the_center": "Never stop turning: sweep the view steadily all the way around the arena and fire whenever a monster is under the crosshair, so that none can reach you from behind.",
+    "defend_the_line": "Keep the crosshair on the line of advancing monsters: shoot the nearest one until it falls, then move straight on to the next one, and keep firing the whole time."
+  },
+  "steer": {
+    "battle1": [
+      "Keep turning to the right the whole time without ever stopping, and keep firing the whole time.",
+      "Keep turning to the left the whole time without ever stopping, and keep firing the whole time."
+    ],
+    "battle2": [
+      "Keep turning to the right the whole time without ever stopping, and keep firing the whole time.",
+      "Keep turning to the left the whole time without ever stopping, and keep firing the whole time."
+    ],
+    "defend_the_center": [
+      "Keep turning to the right the whole time without ever stopping, and keep firing the whole time.",
+      "Keep turning to the left the whole time without ever stopping, and keep firing the whole time."
+    ],
+    "defend_the_line": [
+      "Keep turning to the right the whole time without ever stopping, and keep firing the whole time.",
+      "Keep turning to the left the whole time without ever stopping, and keep firing the whole time."
+    ]
+  }
+}

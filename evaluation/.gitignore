@@ -1,0 +1,6 @@
+# Runtime artifacts
+__pycache__/
+*.egg-info/
+openha_minecraft/logs/
+bench_eval/gameworld/games/
+openha_minecraft/openagents/assets/fonts/

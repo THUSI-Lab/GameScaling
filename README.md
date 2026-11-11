@@ -38,6 +38,10 @@
   <img src="assets/teaser.jpg" alt="From one physical world to diverse virtual worlds" width="100%">
 </p>
 
+## News
+
+- **2026-11-11**: 🎉 Evaluation code is now available for Minecraft (OpenHA), ViZDoom, OmniGameArena, and GameWorld! [Code & setup](evaluation/README.md).
+
 ## Overview
 
 GameScaling models are Qwen3.5 vision-language models with continued pre-training on
@@ -47,7 +51,7 @@ frames and actions) and returns the next **200 ms of keyboard and mouse actions*
 acts.
 
 This GitHub repository holds the inference client, the standard system-prompt template, the
-example and the tests. Each of the eight checkpoints is its own Hugging Face repository (below,
+example, the tests, and the evaluation suite for four game benchmarks. Each of the eight checkpoints is its own Hugging Face repository (below,
 and in the [GameScaling collection](https://huggingface.co/collections/THUSI-Lab/gamescaling-model-6acf7c0c6500ebee61a7f872)). There is no training code. Paper results and analysis are on the [project page](https://gamescaling.github.io).
 
 ## Checkpoints
@@ -67,9 +71,16 @@ and in the [GameScaling collection](https://huggingface.co/collections/THUSI-Lab
   rest from other games. All checkpoints use 1,600 h of gameplay.
 - Weights are bfloat16, from the Qwen3.5-0.8B / 2B / 9B / 27B backbones.
 
+## Evaluation
+
+Evaluation code is available for **Minecraft (OpenHA), ViZDoom, OmniGameArena, and GameWorld**.
+See the [evaluation README](evaluation/README.md) for setup, external assets, and the fixed
+evaluation protocol, or [download evaluation.zip](https://github.com/THUSI-Lab/GameScaling/raw/refs/heads/main/evaluation.zip).
+External game assets are obtained separately as described in that README.
+
 ## File tree
 
-This GitHub repository holds the code; each checkpoint is a separate Hugging Face repository.
+This GitHub repository holds the inference and evaluation code; each checkpoint is a separate Hugging Face repository.
 
 ```text
 THUSI-Lab/GameScaling-<size>-<mixture>   Hugging Face, one repository per checkpoint
@@ -84,6 +95,9 @@ THUSI-Lab/GameScaling-<size>-<mixture>   Hugging Face, one repository per checkp
 └── video_preprocessor_config.json
 
 GameScaling/                    this GitHub repository
+├── evaluation/                 four-benchmark evaluation suite
+│   └── README.md               setup, assets, and fixed evaluation protocol
+├── evaluation.zip              downloadable evaluation bundle
 ├── prompts/
 │   ├── system_prompt_template.txt  standard prompt, 3 slots (§2)
 │   └── example_doom_battle1.txt    complete Doom prompt (§2)

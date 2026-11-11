@@ -1,0 +1,14 @@
+model_name: qwen3-vl-8b-sft-g7
+prompt_template_id: sft_computer_use_template
+
+output_format: |
+    Output a plain string: <|action_start|>X Y Z ; k1 k2 ; k3 ; k4 ; k5 ; k6<|action_end|>
+
+model: "/model"
+endpoint: "http://127.0.0.1:8094/v1/chat/completions"
+max_tokens: 4096
+
+enable_memory: true
+memory_rounds: 19
+memory_include_fields: "screenshot,action"
+temperature: 1.0

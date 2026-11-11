@@ -1,0 +1,8 @@
+# ViZDoom eval harness dependencies (CPU software rendering; no apt packages or X server needed)
+vizdoom==1.2.4        # wheel bundles SDL2 + boost + freedoom2.wad
+numpy
+Pillow
+PyYAML>=6.0
+requests
+imageio
+imageio-ffmpeg        # video recording; if not installed, pass --no-record-video

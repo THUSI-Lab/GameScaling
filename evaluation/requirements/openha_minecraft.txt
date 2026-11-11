@@ -1,0 +1,53 @@
+# OpenHA (Minecraft) eval client dependencies
+# System dependencies (root required): apt-get install -y openjdk-8-jdk-headless xvfb
+# Install order matters: first `pip install --no-deps minestudio==1.1.6`, then this file, then pin numpy separately last.
+# After installing, minestudio must be patched (Text.sample); see REQUIREMENTS.md.
+
+# Minecraft simulator runtime
+gym==0.26.2
+gym3
+gymnasium
+minecraft_data==3.20.0
+lmdb
+Pyro4
+daemoniker
+xmltodict
+dm-tree
+coloredlogs
+lxml
+diskcache
+absl-py
+# Video / rendering
+av
+imageio
+imageio-ffmpeg
+opencv-python-headless
+moderngl
+glfw
+glcontext
+# MineStudio policy model stack
+lightning
+pytorch-lightning
+torchmetrics
+timm
+x_transformers==0.27.1
+entmax
+# Config / terminal
+hydra-core
+hydra_colorlog
+rich
+ipython
+tqdm
+einops
+ray
+# OpenHA client
+openai
+anthropic
+pandas
+openpyxl
+requests
+huggingface_hub
+qwen-vl-utils
+Pillow
+# Must be installed last
+numpy==1.26.4

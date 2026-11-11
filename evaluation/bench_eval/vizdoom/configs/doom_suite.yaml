@@ -1,0 +1,62 @@
+# ============================================================================
+# ViZDoom FPS suite -- the four maps of Game-TARS Figure 8 (arXiv 2510.23691).
+#
+# Every value here is the STANDARD protocol. Changing one makes the resulting scores
+# incomparable with previously recorded results, so record the override
+# in the run's `--served-name` when you do.
+# ============================================================================
+
+output_root: runs/doom
+episodes_per_map: 3
+
+# Doom only advances when the harness asks it to, so the world is frozen while
+# the model thinks -- the same contract as OmniGameArena's pdq clock.
+clock_mode: pdq
+
+record_video: true
+video_fps: 30
+
+env:
+  resolution: [1280, 720]     # rendered natively; no upscale before the policy
+  render_hud: true            # HEALTH / AMMO are on screen for every model alike
+  max_steps: 350              # 350 steps x 6 tics = 2100 tics = the map timeout
+  # How per-mille mouse becomes degrees. `projective` is the standard: it reads
+  # X as "a fraction of a frame width of screen-space travel" (which is what the
+  # training normalisation dx/capture_width means) and inverts Doom's tangent
+  # projection exactly, using focal lengths measured by
+  # docker/vzd_calibrate_turn.py. Re-run that script if the render resolution or
+  # aspect ratio ever changes.
+  mouse_mode: projective
+  # Only read when mouse_mode = linear, i.e. only when reproducing the batches
+  # recorded before the calibration existed. 90/45 under-turn a screen-space aim
+  # by 1.7x / 1.6x.
+  turn_deg_per_full_x: 90.0
+  look_deg_per_full_y: 45.0
+
+agent:
+  base_url: http://127.0.0.1:30000/v1
+  api_key: EMPTY
+  # oga = the assembled skeleton OmniGameArena measures every <|action_start|>
+  # model with, so a score here is readable next to an OGA score. See
+  # vizdoom_arena/prompts.py for why guided/native are not.
+  prompt_style: oga
+  history_len: 20             # 20 frames, history keeps actions only
+  history_reasoning_len: 0
+  temperature: 1.0
+  max_tokens: 96
+  reasoning: true
+  reasoning_style: free       # the model closes its own <think> and acts
+  # 2048 is OGA's number (docker/oga_make_configs.py), so the CPT checkpoints we
+  # compare across the two suites get the same budget. A CPT checkpoint never
+  # comes close; a thinking baseline does not fit and must be given an explicit
+  # 16384 (Qwen3-VL-8B-Thinking spends 800-2700 tokens before the action). Do not
+  # raise this default to accommodate one model: the validity gate reports
+  # UNCLOSED-THINK when the budget is the binding constraint, which is the signal.
+  reasoning_max_tokens: 2048
+  resize: [1280, 720]
+
+maps:
+  - battle1
+  - battle2
+  - defend_the_center
+  - defend_the_line

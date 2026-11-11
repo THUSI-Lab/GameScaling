@@ -1,0 +1,8 @@
+Source: https://github.com/Farama-Foundation/ViZDoom/blob/1.2.4/README.md
+Source Git blob SHA: 4606351f09a5d45ff60f0c585876fd895643e590
+Retrieved: 2026-11-11
+
+## License
+The code original to ViZDoom is under MIT license. ZDoom uses code from several sources with [varying licensing schemes](http://zdoom.org/wiki/license).
+
+This is the upstream README statement, not a newly assigned license for the included WAD files. The two included defend scenarios are byte-identical to the ViZDoom 1.2.4 files. See THIRD_PARTY_NOTICES.md for provenance.

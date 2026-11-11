@@ -1,0 +1,72 @@
+# ============================================================================
+# OmniGameArena SOLO suite — all 7 single-player games, one shared yourvla
+# (Qwen3-VL-8B CPT) agent served OpenAI-compatibly by vLLM.
+#
+# run_benchmark.py sees the top-level `games:` list and runs them sequentially
+# (one vLLM, one UE5 instance switching maps per game). Per-game env.map is
+# auto-filled from each game's registry default, so we only list game names.
+# ============================================================================
+
+output_root: runs/yourvla
+episodes_per_cell: 3
+
+# pdq = decision-quality clock (game pauses while the model thinks) -- main metric.
+clock_mode: pdq
+
+live: false
+log: false
+record_video: true
+save_frames: false        # MP4 is the visualization; do not persist per-step JPGs
+video_fps: 30
+flat_output: true
+
+# Shared env defaults applied to every game (merged under each game's own env).
+env_defaults:
+  screenshot_quality: 85
+  map_wait: 3.0
+  max_steps: 300
+  obs_delay: 0.0
+
+# Official VLM cold-start caps (vanilla.yaml). scene_escape / cue_chase are
+# 500; everything else stays at 300. oga_make_configs / run_benchmark both
+# apply this. Do not compare new 500-step scores with th97/cam16 (those are 300).
+game_env:
+  scene_escape:
+    max_steps: 500
+  cue_chase:
+    max_steps: 500
+
+agents_defaults:
+  kind: yourvla
+  method: policy
+  extra:
+    base_url: http://127.0.0.1:30000/v1
+    api_key: EMPTY
+    # Mouse de-normalisation: per-mille -> RemoteInput units * gain.
+    # Training Y>0 = move down; UE RemoteInput dy>0 = look up → invert_y must be true.
+    screen_w: 1280
+    screen_h: 720
+    mouse_gain_x: 1.0
+    mouse_gain_y: 1.0
+    invert_y: true
+    max_tokens: 96
+
+# Served model name MUST match the vLLM --served-model-name in the launcher.
+agents:
+  - model: gui_game_cpt_step5000
+
+params:
+  history_len: 20         # 4s @ 5Hz window (== training)
+  temperature: 1.0
+  with_game_prompt: false
+  with_reasoning: false
+
+# The 7 SOLO games (registry names). Maps resolve from each game's default.
+games:
+  - obstacle_run_3d
+  - obstacle_run_2d
+  - last_stand
+  - monster_shoot
+  - scene_escape
+  - cue_chase
+  - solo_craft

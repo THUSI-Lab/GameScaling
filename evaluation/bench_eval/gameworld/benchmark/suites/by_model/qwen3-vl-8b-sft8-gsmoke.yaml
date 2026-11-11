@@ -1,0 +1,15 @@
+suite_name: repro35b_gw_smoke_20261021r1
+headless: true
+cases:
+- game: 01_2048
+  tasks:
+  - repro35b_smoke_01_01_20261021r1
+  models:
+  - qwen3-vl-8b-sft-g1
+  repeat: 1
+- game: 07_chrome-dino
+  tasks:
+  - repro35b_smoke_07_01_20261021r1
+  models:
+  - qwen3-vl-8b-sft-g1
+  repeat: 1

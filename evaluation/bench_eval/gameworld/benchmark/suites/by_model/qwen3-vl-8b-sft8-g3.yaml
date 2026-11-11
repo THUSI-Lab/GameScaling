@@ -1,0 +1,88 @@
+suite_name: qwen3-vl-8b-sft8_g3
+headless: true
+
+cases:
+  - game: "01_2048"
+    tasks: ['01_03']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "03_astray"
+    tasks: ['03_01']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "04_boxel-rebound"
+    tasks: ['04_04']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "06_captaincallisto"
+    tasks: ['06_02']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "07_chrome-dino"
+    tasks: ['07_05']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "09_cubefield"
+    tasks: ['09_03']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "11_edge-surf"
+    tasks: ['11_01']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "12_fireboy-and-watergirl"
+    tasks: ['12_04']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "14_geodash"
+    tasks: ['14_02']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "15_google-snake"
+    tasks: ['15_05']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "17_mario-game"
+    tasks: ['17_03']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "19_minesweeper"
+    tasks: ['19_01']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "20_monkey-mart"
+    tasks: ['20_04']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "22_ovo"
+    tasks: ['22_02']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "23_pacman"
+    tasks: ['23_05']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "25_rocket-league-2d"
+    tasks: ['25_03']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "27_stack"
+    tasks: ['27_01']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "28_temple-run-2"
+    tasks: ['28_04']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "30_vex-3"
+    tasks: ['30_02']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "31_wolf3d"
+    tasks: ['31_05']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
+  - game: "33_worlds-hardest-game"
+    tasks: ['33_03']
+    models: ["qwen3-vl-8b-sft-g3"]
+    repeat: 1
