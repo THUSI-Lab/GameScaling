@@ -451,19 +451,6 @@ If you find our work useful, please cite:
 }
 ```
 
-**Survey — Towards Generalist Game Agents**
-
-```bibtex
-@article{zhang2026towards,
-  title={Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds},
-  author={Kuan Zhang and Dongchen Liu and Qiyue Zhao and Tianyu Xin and Yue Su and Haisheng Wang and Han Yin and Hongbo Ma and Peize Li and Tianjun Gu and Xiangnan Wu and Xinran Zhang and Yongxuan Li and Zirong Chen and Yiming Li},
-  journal={Transactions on Machine Learning Research},
-  issn={2835-8856},
-  year={2026},
-  url={https://openreview.net/forum?id=SDkEq8Fzvl}
-}
-```
-
 **Gamer**
 
 ```bibtex
@@ -478,6 +465,17 @@ If you find our work useful, please cite:
 ## Related survey
 
 Interested in game agents? Explore our survey, **Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
+
+```bibtex
+@article{zhang2026towards,
+  title={Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds},
+  author={Kuan Zhang and Dongchen Liu and Qiyue Zhao and Tianyu Xin and Yue Su and Haisheng Wang and Han Yin and Hongbo Ma and Peize Li and Tianjun Gu and Xiangnan Wu and Xinran Zhang and Yongxuan Li and Zirong Chen and Yiming Li},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2026},
+  url={https://openreview.net/forum?id=SDkEq8Fzvl}
+}
+```
 
 ## Star History
 
