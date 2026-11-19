@@ -438,6 +438,10 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
 
 ## Citation
 
+If you find our work useful, please cite:
+
+**GameScaling**
+
 ```bibtex
 @article{zhang-scaling-games,
   title = {Scaling in Games: Continued Pre-Training for Embodied Agents in Diverse Virtual Worlds},
@@ -447,9 +451,33 @@ any kind with it: nothing here is sold, licensed for a fee, or used in any produ
 }
 ```
 
+**Survey — Towards Generalist Game Agents**
+
+```bibtex
+@article{zhang2026towards,
+  title={Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds},
+  author={Kuan Zhang and Dongchen Liu and Qiyue Zhao and Tianyu Xin and Yue Su and Haisheng Wang and Han Yin and Hongbo Ma and Peize Li and Tianjun Gu and Xiangnan Wu and Xinran Zhang and Yongxuan Li and Zirong Chen and Yiming Li},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2026},
+  url={https://openreview.net/forum?id=SDkEq8Fzvl}
+}
+```
+
+**Gamer**
+
+```bibtex
+@article{luo-gamer,
+  title = {Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent},
+  author = {Luo, Run and Zhang, Kuan and Deng, Qi and Chen, Yukun and Yang, Zhihao and Zhang, Yufei and Hu, Renrong and Zhang, Yi and Ma, Guiyu and Fan, Tianyu and Chen, Longze and Sun, Hao and Li, Jiaming and Yang, Jiaming and Liu, Xiaohao and Tan, Tao and Wang, Minzheng and Jia, Hangtian and Yuan, Shuai and Wang, Lvdi and Liu, Xiao and Ma, Chao and Zou, Yuting and Zheng, Yinhe and Xia, Xiaobo and Jiang, Dawei and Ren, Shaoqing},
+  journal = {arXiv preprint arXiv:2611.18397},
+  year = {2026}
+}
+```
+
 ## Related survey
 
-Interested in game agents? Explore our survey, **Towards Generalist Game Players**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
+Interested in game agents? Explore our survey, **Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
 
 ## Star History
 
