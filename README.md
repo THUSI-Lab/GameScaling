@@ -462,6 +462,12 @@ If you find our work useful, please cite:
 }
 ```
 
+## Related benchmark: GameDojo
+
+Explore **GameDojo: Benchmarking Real-Time Interactive Agents in Video Games**, our controllable benchmark of 120 boss encounters across 20 games for evaluating interactive agents, learning algorithms, and agent harnesses in real-time and time-paused settings.
+
+[Project Page](https://gamedojo-benchmark.github.io/) · [GitHub](https://github.com/THUSI-Lab/GameDojo) · [Hugging Face Benchmark & Dataset](https://huggingface.co/datasets/THUSI-Lab/GameDojo) · [GameDojo-4B](https://huggingface.co/THUSI-Lab/GameDojo-4B) · [Paper](https://arxiv.org/abs/2611.30771)
+
 ## Related survey
 
 Interested in game agents? Explore our survey, **Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
