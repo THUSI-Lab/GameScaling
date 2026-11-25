@@ -40,7 +40,10 @@
 
 ## News
 
+- **2026-11-24**: 🎉 We released [GameDojo: Benchmarking Real-Time Interactive Agents in Video Games](https://gamedojo-benchmark.github.io/), with 120 boss encounters across 20 games. [Paper](https://arxiv.org/abs/2611.30771) · [Code](https://github.com/THUSI-Lab/GameDojo).
 - **2026-11-11**: 🎉 Evaluation code is now available for Minecraft (OpenHA), ViZDoom, OmniGameArena, and GameWorld! [Code & setup](evaluation/README.md).
+- **2026-11-05**: 🎉 Our survey, [Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds](https://openreview.net/forum?id=SDkEq8Fzvl), was accepted by **TMLR**!
+
 
 ## Overview
 
