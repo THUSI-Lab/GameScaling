@@ -468,6 +468,15 @@ Explore **GameDojo: Benchmarking Real-Time Interactive Agents in Video Games**, 
 
 [Project Page](https://gamedojo-benchmark.github.io/) · [GitHub](https://github.com/THUSI-Lab/GameDojo) · [Hugging Face Benchmark & Dataset](https://huggingface.co/datasets/THUSI-Lab/GameDojo) · [GameDojo-4B](https://huggingface.co/THUSI-Lab/GameDojo-4B) · [Paper](https://arxiv.org/abs/2611.30771)
 
+```bibtex
+@article{zhang2026gamedojo,
+  title   = {GameDojo: Benchmarking Real-Time Interactive Agents in Video Games},
+  author  = {Zhang, Kuan and Yang, Zhihao and Chen, Yukun and Yin, Xingyiliang and Ouyang, Mingyu and Su, Yue and Wu, Xiangnan and Li, Jiaming and Chen, Longze and Luo, Run and Chen, Zirong and Wang, Lu and Li, Yiming},
+  journal = {arXiv preprint arXiv:2611.30771},
+  year    = {2026}
+}
+```
+
 ## Related survey
 
 Interested in game agents? Explore our survey, **Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds**, and follow the [Awesome-LFMs-Play-Games repository](https://github.com/THUSI-Lab/Awesome-LFMs-Play-Games) for related papers and updates.
