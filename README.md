@@ -78,7 +78,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/mcu/mine_sugar_cane/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/minecraft-mine-sugar-cane.jpg">
-          <img src="assets/demos/minecraft-mine-sugar-cane.webp" width="280" height="158" alt="GameScaling mines sugar cane beside a river in Minecraft">
+          <img src="assets/demos/minecraft-mine-sugar-cane.webp" width="280" alt="GameScaling mines sugar cane beside a river in Minecraft">
         </picture>
       </a><br>
       <strong>Minecraft (OpenHA)</strong><br>
@@ -88,7 +88,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/mcu/craft_emerald/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/minecraft-craft-emerald.jpg">
-          <img src="assets/demos/minecraft-craft-emerald.webp" width="280" height="158" alt="GameScaling uses the Minecraft crafting inventory to make emeralds">
+          <img src="assets/demos/minecraft-craft-emerald.webp" width="280" alt="GameScaling uses the Minecraft crafting inventory to make emeralds">
         </picture>
       </a><br>
       <strong>Minecraft (OpenHA)</strong><br>
@@ -98,7 +98,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_line/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/vizdoom-defend-the-line.jpg">
-          <img src="assets/demos/vizdoom-defend-the-line.webp" width="280" height="158" alt="GameScaling aims and fires at approaching monsters in ViZDoom">
+          <img src="assets/demos/vizdoom-defend-the-line.webp" width="280" alt="GameScaling aims and fires at approaching monsters in ViZDoom">
         </picture>
       </a><br>
       <strong>ViZDoom</strong><br>
@@ -110,7 +110,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_center/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/vizdoom-defend-the-center.jpg">
-          <img src="assets/demos/vizdoom-defend-the-center.webp" width="280" height="158" alt="GameScaling turns and shoots monsters surrounding the player in ViZDoom">
+          <img src="assets/demos/vizdoom-defend-the-center.webp" width="280" alt="GameScaling turns and shoots monsters surrounding the player in ViZDoom">
         </picture>
       </a><br>
       <strong>ViZDoom</strong><br>
@@ -120,7 +120,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/oga/monster_shoot/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/omnigamearena-monster-shoot.jpg">
-          <img src="assets/demos/omnigamearena-monster-shoot.webp" width="280" height="158" alt="GameScaling fights enemies in the OmniGameArena shooting arena">
+          <img src="assets/demos/omnigamearena-monster-shoot.webp" width="280" alt="GameScaling fights enemies in the OmniGameArena shooting arena">
         </picture>
       </a><br>
       <strong>OmniGameArena</strong><br>
@@ -130,7 +130,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/oga/scene_escape/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/omnigamearena-scene-escape.jpg">
-          <img src="assets/demos/omnigamearena-scene-escape.webp" width="280" height="158" alt="GameScaling navigates rooms and completes escape tasks in OmniGameArena">
+          <img src="assets/demos/omnigamearena-scene-escape.webp" width="280" alt="GameScaling navigates rooms and completes escape tasks in OmniGameArena">
         </picture>
       </a><br>
       <strong>OmniGameArena</strong><br>
@@ -142,7 +142,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/gw/pacman/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-pacman.jpg">
-          <img src="assets/demos/gameworld-pacman.webp" width="280" height="158" alt="GameScaling guides Pac-Man through the maze">
+          <img src="assets/demos/gameworld-pacman.webp" width="280" alt="GameScaling guides Pac-Man through the maze">
         </picture>
       </a><br>
       <strong>GameWorld</strong><br>
@@ -152,7 +152,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/gw/gentlemans_adventure/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-gentlemans-adventure.jpg">
-          <img src="assets/demos/gameworld-gentlemans-adventure.webp" width="280" height="158" alt="GameScaling jumps between platforms in Gentleman’s Adventure">
+          <img src="assets/demos/gameworld-gentlemans-adventure.webp" width="280" alt="GameScaling jumps between platforms in Gentleman’s Adventure">
         </picture>
       </a><br>
       <strong>GameWorld</strong><br>
@@ -162,7 +162,7 @@ Click a preview or title to watch the full recording.
       <a href="https://gamescaling.github.io/videos/frontier/gw/boxel_rebound/tp_gamescaling-9b-s3.mp4">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-boxel-rebound.jpg">
-          <img src="assets/demos/gameworld-boxel-rebound.webp" width="280" height="158" alt="GameScaling jumps over obstacles in Boxel Rebound">
+          <img src="assets/demos/gameworld-boxel-rebound.webp" width="280" alt="GameScaling jumps over obstacles in Boxel Rebound">
         </picture>
       </a><br>
       <strong>GameWorld</strong><br>
