@@ -38,6 +38,13 @@
   <img src="assets/teaser.jpg" alt="From one physical world to diverse virtual worlds" width="100%">
 </p>
 
+<p align="center">
+  <a href="#overview">Overview</a> ·
+  <a href="#gameplay-demos">Gameplay Demos</a> ·
+  <a href="#checkpoints">Checkpoints</a> ·
+  <a href="#evaluation">Evaluation</a>
+</p>
+
 ## News
 
 - **2026-11-24**: 🎉 We released [GameDojo: Benchmarking Real-Time Interactive Agents in Video Games](https://gamedojo-benchmark.github.io/), with 120 boss encounters across 20 games. [Paper](https://arxiv.org/abs/2611.30771) · [Code](https://github.com/THUSI-Lab/GameDojo).
@@ -56,6 +63,116 @@ acts.
 This GitHub repository holds the inference client, the standard system-prompt template, the
 example, the tests, and the evaluation suite for four game benchmarks. Each of the eight checkpoints is its own Hugging Face repository (below,
 and in the [GameScaling collection](https://huggingface.co/collections/THUSI-Lab/gamescaling-model-6acf7c0c6500ebee61a7f872)). There is no training code. Paper results and analysis are on the [project page](https://gamescaling.github.io).
+
+<a name="gameplay-demos"></a>
+
+## 🎬 Gameplay Demos
+
+Watch **GameScaling-9B-S3** play across **Minecraft (OpenHA), ViZDoom, OmniGameArena, and GameWorld**.
+These short looping previews come from individual **time-paused** rollouts on our project page.
+Click a preview or title to watch the full recording.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/mcu/mine_sugar_cane/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/minecraft-mine-sugar-cane.jpg">
+          <img src="assets/demos/minecraft-mine-sugar-cane.webp" width="280" height="158" alt="GameScaling mines sugar cane beside a river in Minecraft">
+        </picture>
+      </a><br>
+      <strong>Minecraft (OpenHA)</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/mcu/mine_sugar_cane/tp_gamescaling-9b-s3.mp4">Mine Sugar Cane</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/mcu/craft_emerald/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/minecraft-craft-emerald.jpg">
+          <img src="assets/demos/minecraft-craft-emerald.webp" width="280" height="158" alt="GameScaling uses the Minecraft crafting inventory to make emeralds">
+        </picture>
+      </a><br>
+      <strong>Minecraft (OpenHA)</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/mcu/craft_emerald/tp_gamescaling-9b-s3.mp4">Craft Emerald</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_line/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/vizdoom-defend-the-line.jpg">
+          <img src="assets/demos/vizdoom-defend-the-line.webp" width="280" height="158" alt="GameScaling aims and fires at approaching monsters in ViZDoom">
+        </picture>
+      </a><br>
+      <strong>ViZDoom</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_line/tp_gamescaling-9b-s3.mp4">Defend the Line</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_center/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/vizdoom-defend-the-center.jpg">
+          <img src="assets/demos/vizdoom-defend-the-center.webp" width="280" height="158" alt="GameScaling turns and shoots monsters surrounding the player in ViZDoom">
+        </picture>
+      </a><br>
+      <strong>ViZDoom</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/vizdoom/defend_the_center/tp_gamescaling-9b-s3.mp4">Defend the Center</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/oga/monster_shoot/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/omnigamearena-monster-shoot.jpg">
+          <img src="assets/demos/omnigamearena-monster-shoot.webp" width="280" height="158" alt="GameScaling fights enemies in the OmniGameArena shooting arena">
+        </picture>
+      </a><br>
+      <strong>OmniGameArena</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/oga/monster_shoot/tp_gamescaling-9b-s3.mp4">Monster Shoot</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/oga/scene_escape/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/omnigamearena-scene-escape.jpg">
+          <img src="assets/demos/omnigamearena-scene-escape.webp" width="280" height="158" alt="GameScaling navigates rooms and completes escape tasks in OmniGameArena">
+        </picture>
+      </a><br>
+      <strong>OmniGameArena</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/oga/scene_escape/tp_gamescaling-9b-s3.mp4">Scene Escape</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/gw/pacman/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-pacman.jpg">
+          <img src="assets/demos/gameworld-pacman.webp" width="280" height="158" alt="GameScaling guides Pac-Man through the maze">
+        </picture>
+      </a><br>
+      <strong>GameWorld</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/gw/pacman/tp_gamescaling-9b-s3.mp4">Pac-Man</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/gw/gentlemans_adventure/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-gentlemans-adventure.jpg">
+          <img src="assets/demos/gameworld-gentlemans-adventure.webp" width="280" height="158" alt="GameScaling jumps between platforms in Gentleman’s Adventure">
+        </picture>
+      </a><br>
+      <strong>GameWorld</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/gw/gentlemans_adventure/tp_gamescaling-9b-s3.mp4">Gentleman’s Adventure</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://gamescaling.github.io/videos/frontier/gw/boxel_rebound/tp_gamescaling-9b-s3.mp4">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/demos/gameworld-boxel-rebound.jpg">
+          <img src="assets/demos/gameworld-boxel-rebound.webp" width="280" height="158" alt="GameScaling jumps over obstacles in Boxel Rebound">
+        </picture>
+      </a><br>
+      <strong>GameWorld</strong><br>
+      <a href="https://gamescaling.github.io/videos/frontier/gw/boxel_rebound/tp_gamescaling-9b-s3.mp4">Boxel Rebound</a>
+    </td>
+  </tr>
+</table>
+
+Explore the project page for [base model vs. S1 vs. S3 comparisons](https://gamescaling.github.io/#demo-mixture),
+[frontier-model comparisons and interaction settings](https://gamescaling.github.io/#demo-frontier), and benchmark averages.
 
 ## Checkpoints
 
