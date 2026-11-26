@@ -4,3 +4,7 @@ Pillow>=10.0
 
 # Serving the checkpoint (separate environment is fine):
 #   pip install "vllm>=0.17"      # Qwen3.5 architecture; tested with 0.17.0
+
+# Optional, PS5 controller executor (gamescaling/gamepad/):
+#   pip install evdev       # Linux: virtual DualSense via /dev/uinput
+#   pip install vgamepad    # Windows: virtual DualShock 4 via ViGEmBus

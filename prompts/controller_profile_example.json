@@ -1,0 +1,16 @@
+{
+  "name": "example-third-person",
+  "mouse_full_scale": 120,
+  "mouse_deadzone": 3,
+  "invert_y": false,
+  "buttons": {
+    "E": "Square",
+    "F": "Triangle",
+    "R": "Square",
+    "Shift": "Cross",
+    "Space": "Cross",
+    "Q": null
+  },
+  "scroll_up": "Triangle",
+  "scroll_down": null
+}

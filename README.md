@@ -220,18 +220,22 @@ GameScaling/                    this GitHub repository
 ├── evaluation.zip              downloadable evaluation bundle
 ├── prompts/
 │   ├── system_prompt_template.txt  standard prompt, 3 slots (§2)
-│   └── example_doom_battle1.txt    complete Doom prompt (§2)
+│   ├── example_doom_battle1.txt    complete Doom prompt (§2)
+│   └── controller_profile_example.json  controller layout override (§8)
 ├── examples/
 │   ├── doom_battle1.jpg        test frame (1280x720)
 │   ├── doom_battle1_action.txt the model's reply on that frame
-│   └── run_example.py          frame in, action out (§3)
+│   ├── run_example.py          frame in, action out (§3)
+│   └── run_gamepad.py          actions on a virtual PS5 controller (§8)
 ├── gamescaling/                inference client
 │   ├── prompt.py               system prompt builders
 │   ├── policy.py               client and request body
 │   ├── action.py               action format and parser
-│   └── keymaps.py              key names <-> browser keys
+│   ├── keymaps.py              key names <-> browser keys
+│   └── gamepad/                PS5 controller (DualSense) executor (§8)
 ├── scripts/serve_vllm.sh       start a vLLM server
 ├── tests/test_core.py          offline tests (no GPU)
+├── tests/test_gamepad.py       offline controller tests
 ├── assets/                     images for this README
 ├── requirements.txt            client deps: requests, Pillow
 └── LICENSE                     Apache 2.0
@@ -538,9 +542,66 @@ Before trusting the results, check:
 
 ```bash
 python tests/test_core.py      # or: python -m pytest tests/
+python tests/test_gamepad.py   # PS5 controller mapping, timing and backends (§8)
 ```
 
-Offline checks of prompts, request bodies and action parsing; no GPU or server needed.
+Offline checks of prompts, request bodies, action parsing and the controller executor; no GPU, server or
+controller needed.
+
+## 8. Playing with a PS5 controller (DualSense)
+
+Some games only accept a gamepad. `gamescaling.gamepad` executes the model's keyboard/mouse chunks on a
+**virtual PS5 controller**, so the released checkpoints can play them without retraining. Each 200 ms chunk is
+still six 33 ms steps; a controller profile maps the action onto the pad:
+
+| Model output | Controller (default profile) |
+|---|---|
+| `W` `A` `S` `D` (per step) | Left stick; diagonals are pushed to the rim, opposite keys cancel |
+| Mouse `X Y` (whole chunk) | Right stick, held for the chunk: deflection = `X / mouse_full_scale` (default 150), clipped to ±1; movements of 3 or less stay centred |
+| `LB` / `RB` / `MB` | `R2` fire / `L2` aim / `R3` |
+| `Space` `Ctrl` `C` `R` `E` `F` | `Cross` `Circle` `Circle` `Square` `Triangle` `Triangle` |
+| `Q` `G` `Shift` `V` | `L1` `R1` `L3` `R3` |
+| `Tab` `M` / `Esc` / `Enter` | `Touchpad` / `Options` / `Cross` |
+| `Up` `Down` `Left` `Right`, `one`..`four` | D-pad |
+| Scroll `Z` | Optional button tap (`scroll_up` / `scroll_down`) |
+
+Tokens the profile does not bind are ignored and reported (`GamepadExecutor.unmapped`). Unparsed actions run as
+six neutral steps. Override the layout per game with a JSON profile; entries merge into the defaults and `null`
+unbinds a key (see `prompts/controller_profile_example.json`):
+
+```json
+{"name": "my-game", "mouse_full_scale": 120, "buttons": {"E": "Square", "Q": null}, "scroll_up": "Triangle"}
+```
+
+Keep the system prompt in keyboard/mouse terms (§2), describing what each key does in your game according to
+the profile, since that is the vocabulary the model was trained on.
+
+```python
+from gamescaling.gamepad import ControllerProfile, GamepadExecutor, get_backend
+
+with get_backend("auto") as pad:                    # uinput on Linux, vigem on Windows
+    ex = GamepadExecutor(pad, ControllerProfile.from_json("my_profile.json"))
+    policy.reset()
+    while playing:
+        ex.execute(policy.act(capture_frame()).action)   # 6 x 33 ms on the controller
+    ex.finish()
+```
+
+```bash
+python examples/run_gamepad.py --backend dummy                     # map the reference Doom reply, print 6 steps
+python examples/run_gamepad.py --live --prompt prompts/my_game.txt --seconds 120 --profile my_profile.json
+```
+
+| Backend | OS | Appears to games as | Install |
+|---|---|---|---|
+| `uinput` | Linux | DualSense (054c:0ce6), kernel `hid-playstation` evdev layout; recognised by SDL, Steam Input and emulators | `pip install evdev`, write access to `/dev/uinput` |
+| `vigem` | Windows | DualShock 4 via ViGEmBus: same buttons, sticks and triggers; no adaptive triggers or haptics | `pip install vgamepad` |
+| `dummy` | any | nothing; records or prints each step | — |
+
+macOS cannot create virtual gamepads without a signed driver, so it has no backend. On Linux the touchpad press
+is not emitted (the kernel exposes the touchpad as a separate device). The camera speed a stick deflection
+produces depends on the game's sensitivity setting, so tune `mouse_full_scale` per game and watch a recording.
+Only automate games whose terms allow it; many online games ban bots.
 
 ## License
 
