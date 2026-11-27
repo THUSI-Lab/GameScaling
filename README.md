@@ -411,9 +411,13 @@ a.parsed     # False = could not be parsed; execute as a no-op
 decision.reasoning   # the model's thinking for this step ("" if it acted directly)
 ```
 
-Pass `a` to your executor. Run 6 steps of 33 ms, holding that step's keys during each one. Keys
-that appear in two consecutive groups stay held rather than being pressed again. Mouse movement
-is `X/1000 * screen width` and `Y/1000 * screen height`. You can spread it over the 200 ms or
+Pass `a` to your executor. Run 6 steps of 33 ms, holding that step's keys during each one.
+
+<a name="continuous-holds"></a>
+
+> **Important: preserve holds across chunks.** If a key or mouse button appears in the last group of one **200 ms reply** and the first group of the next, **keep it continuously pressed across the boundary**. Release it only when absent from the next group. Releasing and re-pressing between chunks breaks long holds (e.g., mining or sustained firing) and can severely degrade performance.
+
+Mouse movement is `X/1000 * screen width` and `Y/1000 * screen height`. You can spread it over the 200 ms or
 send it at once. The frame is sent at its native size; set `PolicyConfig(image_size=(w, h))` to
 resize it first.
 
